@@ -1,6 +1,8 @@
-import { FINANCIAL_MODEL_SEARCH_URL, IFinancialSearchData, IFinancilSearchParams } from '../../../shared';
 import axios from 'axios';
 import { UseQueryResult, useQuery } from 'react-query';
+
+import { FINANCIAL_MODEL_SEARCH_URL } from '../../../shared';
+import { IFinancialSearchData, IFinancilSearchParams } from '../financialData.model';
 
 const QUERY_KEY = ['Financial'];
 

@@ -12,7 +12,15 @@ const root = ReactDOM.createRoot(
 );
 
 const theme = createTheme({
-  
+  components: {
+    Text: {
+      styles: { 
+        root: {
+          lineHeight: '100%',
+        },
+      },
+    },
+  },
 });
 
 root.render(

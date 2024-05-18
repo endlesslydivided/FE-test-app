@@ -26,6 +26,7 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/explicit-module-boundary-types' : 'off',
     'arrow-parens': ['error', 'as-needed'],
     'arrow-spacing': 2,
     'comma-dangle': [

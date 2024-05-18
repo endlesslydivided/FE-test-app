@@ -3,11 +3,10 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import Layout from './common/components/layout/Layout';
 import { useAuthorization } from './common/hooks/useAuthorization';
-import { AuthorizationPage, BotPage, FormPage, SearchPage } from './pages';
+import { AuthorizationPage, BotPage, MainPage, SearchPage } from './pages';
 
 const MAIN_PATH = '/main';
 const SEARCH_PATH = '/search';
-const FORM_PATH = '/form';
 const BOT_PATH = '/bot';
 
 const AppRouter: FC = () => {
@@ -19,7 +18,6 @@ const AppRouter: FC = () => {
       <Route element={<MainPage />} index />
 
       <Route path={MAIN_PATH + SEARCH_PATH} element={<SearchPage />} index />
-      <Route path={MAIN_PATH + FORM_PATH} element={<FormPage />} />
       <Route path={MAIN_PATH + BOT_PATH} element={<BotPage />} />
 
     </Route>)

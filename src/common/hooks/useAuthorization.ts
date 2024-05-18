@@ -1,7 +1,8 @@
-import {usersJSON} from '../../shared';
+import { usersJSON } from '../../shared';
 
-export const useAuthorization = () =>{
-    console.log(usersJSON)
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const useAuthorization = () => {
+  console.log(usersJSON);
 
-    return usersJSON;
-}
+  return usersJSON;
+};
