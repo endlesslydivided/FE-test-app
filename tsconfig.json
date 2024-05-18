@@ -1,3 +1,23 @@
 {
-  "extends": "@repo/typescript-config/base.json"
+  "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "lib": [
+      "es2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "moduleDetection": "force",
+    "moduleResolution": "Node",
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "allowJs": true,
+    "noEmit": true
+  },
 }

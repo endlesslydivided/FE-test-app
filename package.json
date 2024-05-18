@@ -1,15 +1,16 @@
 {
-  "name": "my-turborepo",
+  "name": "my-test-app",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "type-check": "turbo type-check"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@test-app/eslint-config": "*",
+    "@types/lodash": "^4.17.4",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
@@ -19,6 +20,10 @@
   "packageManager": "npm@10.2.3",
   "workspaces": [
     "apps/*",
-    "packages/*"
-  ]
+    "packages/*",
+    "packages/config/*"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

@@ -1,0 +1,20 @@
+{
+  "name": "@test-app/shared",
+  "version": "0.1.0",
+  "description": "Utilities that can be shared by different apps in monorepo",
+  "main": "./index.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "lint --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@test-app/eslint-config/base"
+    ],
+    "root": true
+  },
+  "dependencies": {
+    "pino": "^9.1.0"
+  }
+}
