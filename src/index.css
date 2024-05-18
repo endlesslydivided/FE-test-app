@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Bold_Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Light.ttf") format("truetype");
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Light_Italic.ttf") format("truetype");
+    font-weight: light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sansation';
+}

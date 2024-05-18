@@ -1,3 +1,6 @@
 {
-    "notebook.formatOnSave.enabled": true
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "notebook.insertFinalNewline": true,
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true
 }
