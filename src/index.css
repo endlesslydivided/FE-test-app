@@ -40,6 +40,33 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./assets/fonts/robotoCondensed/RobotoCondensed-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./assets/fonts/robotoCondensed/RobotoCondensed-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 html,
 body,
@@ -50,4 +77,26 @@ body,
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sansation';
+
+}
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+    background: white; 
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: rgba(0,0,0,.15);
+    border-radius: 10px;
+    transition: background 4s ease-in-out; z-index:100;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: background 4s ease-in-out;
+    background: rgba(0,0,0,.45);
+    border-radius: 10px; z-index:100;
 }

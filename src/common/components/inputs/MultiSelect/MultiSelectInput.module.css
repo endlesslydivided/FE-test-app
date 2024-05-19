@@ -1,0 +1,58 @@
+.loading {
+  opacity: 1;
+  transform: scale(1);
+  margin-right: 5px;
+  transition: all .2s ease;
+}
+
+.loadingVisible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.MultiSelectValues {
+  height: 100%;
+}
+
+.MultiSelectInput {
+  min-height: 42px;
+}
+
+.noEntriesDropdown {
+  &[data-hidden] {
+      display: table;
+  }
+}
+
+.inputWrapper {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.RemoveButton:hover {
+  background-color: var(--mantine-color-gray-2);
+}
+
+.rightIcon {
+  pointer-events: all;
+  cursor: pointer;
+  color: var(--mantine-color-gray-6);
+}
+
+.optionMultiSelect {
+  font-family: 'Roboto Condensed';
+  padding: 8px;
+  margin: 2px 0px;
+
+
+  &[data-combobox-active='true']{
+    background-color: #e8e5f9a7;
+  }
+
+  &:hover{
+    background-color: #E8E5F9;
+    &[data-combobox-active='true'] {
+      background-color: #bfbdc97a;
+    }
+  }
+}

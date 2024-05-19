@@ -1,0 +1,21 @@
+.checkboxLabel{
+  font-family: 'Roboto Condensed';
+  color: #101723;
+  font-weight: bold;
+}
+
+.checkboxInput{
+  cursor: pointer;
+  border-width: 2px;
+  font-family: 'Roboto Condensed';
+
+  &:focus{
+    border-color:  #ced4da;
+  }
+
+}
+
+.checkboxGroupError{
+  margin-top:5px;
+  font-family: 'Roboto Condensed';
+}

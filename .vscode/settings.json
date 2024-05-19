@@ -2,5 +2,10 @@
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "notebook.insertFinalNewline": true,
-    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }

@@ -1,0 +1,74 @@
+.pillsInputSelected {
+  margin: 2px 0px;
+
+
+  &[data-combobox-active='true']{
+    background-color: #e8e5f9a7;
+  }
+
+  &:hover{
+    background-color: #E8E5F9;
+    &[data-combobox-active='true'] {
+      background-color: #bfbdc97a;
+    }
+  }
+}
+
+.pill{
+  padding: 8px;
+  gap: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: white;
+  border: #CFCFD4 1px solid;
+
+  cursor: pointer;
+  
+  
+
+  &:hover{
+    transform: scale(0.99);
+
+    background-color: #f5f5f5;
+  }
+
+  &:active{
+    transform: scale(0.98);
+  }
+
+  &[data-combobox-active='true']{
+    background-color: #e8e5f9a7;
+  }
+
+}
+
+.pillSelected {
+  background-color: #f5f5f5;
+}
+
+.pillLabel {
+  font-family: 'Sansation';
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+
+}
+
+.pillGroup{
+  gap: 16px;
+}
+
+.pillsInput{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.pillInputFlex {
+  background-color: #F9F5FD;
+  padding: 16px;
+  gap: 16px;
+  font-family: 'Roboto Condensed';
+}

@@ -31,39 +31,19 @@
 }
 
 .rootMain {
-    padding-inline-start: 49px;
-    background-image: url('../../../assets/images/background.png');
-    background-size: 150%;
-    background-position: -350px -190px;
-    background-repeat: no-repeat;
+    padding-inline-start: 114px;
+    padding-inline-end: 24px;
+    padding-bottom: 24px;
+    padding-top: 80px;
+
 }
+.rootHeader {
+    height: 80px;
+    padding-inline-start: 90px;
+}
+
 
 .rootBottomSectionBox {
     background-color: white;
-}
-
-
-.rootButton {
-
-    font-weight: 700;
-    font-size: 18px;
-    display: flex;
-    border-radius: 4px;
-    padding: 10px;
-    height: 100%;
-    flex: 1;
-
-    .innerButton {
-        min-width: 150px;
-        min-height: 150px;
-    }
-
-    .labelButton {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-
-    }
+    height: calc(-138px + 100dvh);
 }

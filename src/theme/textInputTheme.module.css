@@ -1,0 +1,26 @@
+.textInputLabel{
+  font-family: 'Roboto Condensed';
+  color: #101723;
+  margin-bottom: 6px;
+}
+
+.textInputInput{
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  padding: 12px 16px;
+  height: 43px;
+  font-family: 'Roboto Condensed';
+
+  &::placeholder{
+    color:#a2a3a86b;
+  }
+
+  &:focus{
+    border-color: #ced4da;
+  }
+}
+
+.textInputError{
+  font-family: 'Roboto Condensed';
+
+}

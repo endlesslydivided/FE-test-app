@@ -1,33 +1,30 @@
-import { Button, Flex, Group, Image, Modal, Stack, Text } from '@mantine/core';
+import {
+  Flex,
+  Group,
+  Image,
+  Stack,
+  Text,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import type { FC, MouseEventHandler, PropsWithChildren } from 'react';
+import type { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import documentsImage from '../../../assets/images/documents.svg';
 import documentHumanImage from '../../../assets/images/filesBundle.svg';
 import robotImage from '../../../assets/images/robot.svg';
+import { NewDataModal } from '../../../widgets/NewDataModal/NewDataModal';
 import classes from './Layout.module.css';
-
-const HeaderButton: FC<PropsWithChildren & {onClick?: MouseEventHandler<HTMLButtonElement>}> = ({ children, onClick }) => {
-
-  return (<Button variant='default' onClick={onClick} classNames={{
-    root: classes.rootButton,
-    inner: classes.innerButton,
-    label: classes.labelButton,
-  }}>
-    {children}
-  </Button>);
-
-};
+import { HeaderButton } from './HeaderButton';
 
 export const TopSection: FC = () => {
 
   const [opened, { open, close }] = useDisclosure(false);
 
+  const navigate = useNavigate();
+
   return (
     <>
-      <Modal centered size='1020px' opened={opened} onClose={close} title='New Data'>
-        Hello!
-      </Modal>
+      <NewDataModal opened={opened} close={close}/>
       <Flex p='lg' gap='35px' direction='column' align='center' className={classes.rootTopSectionBox}>
         <Stack gap='31px' align='center'>
           <Text c='white' fw='bold' fz='32px'>AURA</Text>
@@ -38,17 +35,15 @@ export const TopSection: FC = () => {
           </Stack>
         </Stack>
         <Group gap='20px'>
-          <HeaderButton>
+          <HeaderButton onClick={() => navigate('/main/search')}>
             <Image mah='100%' w='125px' maw='100%' src={documentsImage} />
             Search Data
           </HeaderButton>
           <HeaderButton onClick={() => open()}>
-            <Image
-              mah='100%' w='125px' maw='100%'
-              src={documentHumanImage} />
+            <Image mah='100%' w='125px' maw='100%' src={documentHumanImage} />
             Upload your Data
           </HeaderButton>
-          <HeaderButton>
+          <HeaderButton onClick={() => navigate('/main/bot')}>
             <Image mah='100%' w='125px' maw='100%' src={robotImage} style={{ width: 'none' }} />
             Try our AI Tool
           </HeaderButton>
