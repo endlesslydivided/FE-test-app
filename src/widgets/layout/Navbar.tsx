@@ -1,17 +1,17 @@
 import { Box, Button, Flex, Image, Stack } from '@mantine/core';
 import { IconDoorExit, IconRobot, IconSearch } from '@tabler/icons-react';
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import { BOT_PATH, MAIN_PATH, SEARCH_PATH, SIGNIN_PATH } from '../../app/Router';
-import logo from '../../assets/images/logoFull.svg';
 import { useAuth } from '../../app/context/UserContext';
+import logo from '../../assets/images/logoFull.svg';
 
 interface INavbarButtonProps extends PropsWithChildren {
   href: string,
 }
 
-const NavbarButton: FC<INavbarButtonProps> = ({ href, children }) => {
+const NavbarButton = ({ href, children }: INavbarButtonProps) => {
   return (<Button
     component={NavLink}
     to={href}
@@ -25,7 +25,7 @@ const NavbarButton: FC<INavbarButtonProps> = ({ href, children }) => {
   </Button>);
 };
 
-const Navbar: FC = () => {
+const Navbar = () => {
 
   const { signOut } = useAuth();
   const navigate = useNavigate();

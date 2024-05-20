@@ -1,10 +1,9 @@
 import { Box, Center, Image } from '@mantine/core';
-import type { FC } from 'react';
 
 import fullLogo from '../../assets/images/logo.svg';
 import { SignInForm } from '../../features';
 
-export const AuthorizationPage: FC = () => {
+export const AuthorizationPage = () => {
 
   return (
     <Box bg='#1B093C' h='100dvh' w='100dvw'>

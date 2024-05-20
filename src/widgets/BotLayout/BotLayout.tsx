@@ -1,13 +1,12 @@
 import { AppShell, Box, Button, Group, Text } from '@mantine/core';
 import { IconChevronLeft } from '@tabler/icons-react';
-import { FC } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import { MAIN_PATH } from '../../app/Router';
 import Navbar from '../layout/Navbar';
 import classes from './BotLayout.module.css';
 
-export const BotLayout: FC = () => {
+export const BotLayout = () => {
 
   const navigate = useNavigate();
 

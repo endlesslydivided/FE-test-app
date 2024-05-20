@@ -1,12 +1,12 @@
 import { Box, ComboboxItem, Flex, Group, Input, Loader, Pill, PillsInput, Text } from '@mantine/core';
 import { IconPlus, IconX } from '@tabler/icons-react';
 import { uniq } from 'lodash';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import classes from './PillsInput.module.css';
 import { IMultiSelectPillsInputProps } from './model';
 
-export const MultiSelectPillsInput: FC<IMultiSelectPillsInputProps> = props => {
+export const MultiSelectPillsInput = (props: IMultiSelectPillsInputProps) => {
   const {
     value = [],
     onChange,

@@ -1,7 +1,7 @@
 import { ComboboxItem, Group, MultiSelectProps, Stack, Text } from '@mantine/core';
 import { usePrevious } from '@mantine/hooks';
 import { debounce, filter, intersectionWith, uniqBy } from 'lodash';
-import { FC, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useGetGeneralData, usePrefetchGeneralData } from '../../entities/financial/api/getGeneralData';
 import { IFinancialSearchData } from '../../entities/financial/financialData.model';
@@ -15,7 +15,7 @@ const renderMultiSelectOption: MultiSelectProps['renderOption'] = ({ option }: {
   </Group>
 );
 
-export const FinancialSearchInput: FC = () => {
+export const FinancialSearchInput = () => {
 
   const [value, setValue] = useState<string[]>([]);
   const [valueData, setValueData] = useState<ComboboxItem[]>([]);

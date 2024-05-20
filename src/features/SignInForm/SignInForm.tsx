@@ -1,7 +1,6 @@
 import { Button, PasswordInput, Stack, Text, TextInput } from '@mantine/core';
 import { zodResolver } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import type { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { MAIN_PATH } from '../../app/Router';
@@ -12,7 +11,7 @@ import { signIn } from '../../entities/user/api/signIn';
 import { ISignInData } from './model';
 import { signInValidationSchema } from './validation';
 
-export const SignInForm: FC = () => {
+export const SignInForm = () => {
 
   const validate = zodResolver(signInValidationSchema);
 

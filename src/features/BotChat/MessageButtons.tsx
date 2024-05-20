@@ -1,10 +1,9 @@
 import { Box } from '@mantine/core';
 import { IconClipboardText, IconCopy, IconDotsVertical, IconStarOff, IconThumbDown, IconThumbUp } from '@tabler/icons-react';
-import { type FC } from 'react';
 
 import MessageActionButton from './MessageActionButtons';
 
-const MessageButtons: FC = () => {
+const MessageButtons = () => {
 
   return (
     <>

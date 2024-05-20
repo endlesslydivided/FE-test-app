@@ -1,14 +1,14 @@
 import { Button, Group, Image, Stack, Text } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { MAIN_PATH, SEARCH_PATH } from '../../../app/Router';
 import successGuy from '../../../assets/images/successGuy.svg';
 import { PageLayout } from '../../../widgets/PageLayout';
 import { useAuth } from '../../context';
-import { MAIN_PATH, SEARCH_PATH } from '../../../app/Router';
 
-const BoldListText: FC<PropsWithChildren> = ({ children: text }) => {
+const BoldListText = ({ children: text }: PropsWithChildren) => {
   return (
     <Group>
       <IconCheck size='32px' color='#19AA90' strokeWidth='4px' />
@@ -17,7 +17,7 @@ const BoldListText: FC<PropsWithChildren> = ({ children: text }) => {
   );
 };
 
-export const MainPage: FC = () => {
+export const MainPage = () => {
 
   const { auth } = useAuth();
 

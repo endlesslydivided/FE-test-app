@@ -1,13 +1,13 @@
 import { ActionIcon, Box, Group, ScrollArea, Stack, TextInput } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
-import { useEffect, useState, type FC } from 'react';
+import { useEffect, useState, } from 'react';
 
+import { IconSend } from '@tabler/icons-react';
 import { useSendMessage } from '../../entities/aibot/api/sendMessage';
 import BotMessage from './BotMessage';
-import { IconSend } from '@tabler/icons-react';
 
-const BOT_DEFAULT_MODEL = 'claude-3-opus-20240229';
-const BOT_MAX_TOKENS = 1024;
+const BOT_DEFAULT_MODEL = 'gpt-3.5-turbo-16k';
+const BOT_TEMPERATURE = 0.7;
 
 interface IChatMessage {
   id?: number,
@@ -15,13 +15,13 @@ interface IChatMessage {
   answer: string,
 }
 
-const BotChat: FC = () => {
+const BotChat = () => {
 
   const [userMessage, setUserMessage] = useState('');
   const [messages, setMessages] = useState<IChatMessage[]>([]);
 
   const { data: result, isFetching, refetch: send } = useSendMessage({
-    max_tokens: BOT_MAX_TOKENS,
+    temperature: BOT_TEMPERATURE,
     messages: [
       { role: 'user', content: userMessage },
     ],
@@ -35,7 +35,7 @@ const BotChat: FC = () => {
         setMessages(prev => {
           const lastMessage = prev[prev.length - 1];
           console.log(prev);
-          lastMessage.answer = botAnswer.content[0]?.text;
+          lastMessage.answer = botAnswer.choices[0]?.message?.content;
           prev[prev.length - 1] = lastMessage;
           return [...prev];
         });
@@ -63,7 +63,7 @@ const BotChat: FC = () => {
           {
             messages.map(message =>
             (<BotMessage
-              key={message?.question}
+              key={message?.id}
               answer={message?.answer || ''}
               question={message?.question || ''}
               isLoading={isFetching} />))

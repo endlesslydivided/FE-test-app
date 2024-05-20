@@ -1,19 +1,28 @@
 export interface IUserMessage {
-  model: 'claude-3-opus-20240229' | string,
-  max_tokens: number,
+  model: string,
+  temperature: number | string,
   messages: { role: 'user' | string, content: string }[],
 }
 
 export interface IBotMessage {
-  content: { text: string, type: string }[],
   id: string,
-  model: string,
-  role: string,
-  stop_reason: string,
-  stop_sequence: string | null,
-  type: string,
+  object: string,
+  created: number,
+  model: String,
   usage: {
-    input_tokens: number,
-    output_tokens: number,
+    prompt_tokens: number,
+    completion_tokens: number,
+    total_tokens: number
   },
+  choices: [
+    {
+      message: {
+        role: string,
+        content: string
+      },
+      logprobs: string | null,
+      finish_reason: string,
+      index: number
+    }
+  ]
 }

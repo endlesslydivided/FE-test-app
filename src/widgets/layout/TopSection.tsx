@@ -6,7 +6,6 @@ import {
   Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import type { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import documentsImage from '../../assets/images/documents.svg';
@@ -16,7 +15,7 @@ import { NewDataModal } from '../../features/NewDataModal';
 import { HeaderButton } from './HeaderButton';
 import classes from './Layout.module.css';
 
-export const TopSection: FC = () => {
+export const TopSection = () => {
 
   const [opened, { open, close }] = useDisclosure(false);
 

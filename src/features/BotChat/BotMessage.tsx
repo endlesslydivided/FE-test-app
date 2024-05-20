@@ -1,5 +1,4 @@
 import { Box, Group, Loader, Stack, Text } from '@mantine/core';
-import type { FC } from 'react';
 
 import MessageButtons from './MessageButtons';
 
@@ -9,11 +8,11 @@ interface IBotMessageProps {
   isLoading?: boolean,
 }
 
-const BotMessage: FC<IBotMessageProps> = ({
+const BotMessage = ({
   question,
   answer,
   isLoading = false,
-}) => {
+}: IBotMessageProps) => {
   return (
     <Stack>
       <Box bg='#F9F5FD'>

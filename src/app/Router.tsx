@@ -1,18 +1,17 @@
-import type { FC } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import { useAuth } from './context';
-import { BotPage, MainPage, SearchPage } from './authorized';
-import { AuthorizationPage } from './unauthorized';
 import { BotLayout } from '../widgets/BotLayout';
 import { Layout } from '../widgets/layout';
+import { BotPage, MainPage, SearchPage } from './authorized';
+import { useAuth } from './context';
+import { AuthorizationPage } from './unauthorized';
 
 export const MAIN_PATH = '/main';
 export const SEARCH_PATH = '/search';
 export const BOT_PATH = '/bot';
 export const SIGNIN_PATH = '/signin';
 
-const AppRouter: FC = () => {
+const AppRouter = () => {
 
   const { auth } = useAuth();
 

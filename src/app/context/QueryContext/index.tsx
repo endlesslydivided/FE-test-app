@@ -1,11 +1,9 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
-interface IQueryContextProviderProps extends PropsWithChildren {}
 
 export const queryClient = new QueryClient();
 
-export const QueryContextProvider: FC<IQueryContextProviderProps> = ({ children }) => {
+export const QueryContextProvider = ({ children }: PropsWithChildren) => {
   return (
     <QueryClientProvider client={queryClient}>
       {children}

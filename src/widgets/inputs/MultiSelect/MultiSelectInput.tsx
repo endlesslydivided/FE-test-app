@@ -1,10 +1,10 @@
 import { ComboboxData, Flex, Input, Loader, MultiSelect } from '@mantine/core';
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import classes from './MultiSelectInput.module.css';
 import { IMultiSelectInputProps } from './model';
 
-export const MultiSelectInput: FC<IMultiSelectInputProps> = props => {
+export const MultiSelectInput = (props: IMultiSelectInputProps) => {
   const {
     value = [],
     onChange,

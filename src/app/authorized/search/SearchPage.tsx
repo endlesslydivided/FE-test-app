@@ -1,13 +1,10 @@
 import { Image, Stack, Text } from '@mantine/core';
-import type { FC } from 'react';
 
 import statsGuy from '../../../assets/images/statsGuy.svg';
 import { PageLayout } from '../../../widgets/PageLayout';
 import { FinancialSearchInput } from '../../../features';
 
-interface ISearchPageProps { }
-
-export const SearchPage: FC<ISearchPageProps> = () => {
+export const SearchPage = () => {
 
   const leftSection = (<Stack gap='16px'>
     <Text c='#6869AC' fw='bold' fz='22px'>5,000+ companies with data and insight for you</Text>

@@ -1,7 +1,6 @@
 import { Checkbox, Select, SimpleGrid, Stack, TextInput, Textarea } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import { difference, intersection, reject } from 'lodash';
-import { FC } from 'react';
 
 import { IFormProps } from './model';
 
@@ -22,11 +21,11 @@ export enum EProjectType {
   MANAGEMENT_RESEARCH = 'Management Research',
   INDUSTRY_RESEARCH = 'Industry Research',
 }
-export const FormInputs: FC<IFormProps> = ({ form }) => {
+export const FormInputs = ({ form }: IFormProps) => {
 
   const projectTypeSelectOptions = [
-    EProjectType.COMPANY_RESEARCH, 
-    EProjectType.MANAGEMENT_RESEARCH, 
+    EProjectType.COMPANY_RESEARCH,
+    EProjectType.MANAGEMENT_RESEARCH,
     EProjectType.INDUSTRY_RESEARCH,
   ];
 
@@ -44,8 +43,8 @@ export const FormInputs: FC<IFormProps> = ({ form }) => {
   const handleCheckboxChange = (options: string[]) => {
 
     const wasMoreValues = form.values.expert.length > options.length;
-    const newOption = form.values.expert && form.values.expert?.length !== 0 
-      ? (wasMoreValues ? difference(form.values.expert, options) : difference(options, form.values.expert))[0] 
+    const newOption = form.values.expert && form.values.expert?.length !== 0
+      ? (wasMoreValues ? difference(form.values.expert, options) : difference(options, form.values.expert))[0]
       : options[0];
     const hadAsterisk = form.values.expert?.includes(EExpert.ALL);
 
@@ -72,49 +71,49 @@ export const FormInputs: FC<IFormProps> = ({ form }) => {
 
   return (
     <Stack gap='20px'>
-      <TextInput 
+      <TextInput
         {...form.getInputProps('name')}
-        label='Project name' 
-        withAsterisk placeholder='E.g. Microsoft Research'/>
-      <Select 
+        label='Project name'
+        withAsterisk placeholder='E.g. Microsoft Research' />
+      <Select
         {...form.getInputProps('type')}
-        rightSection={<IconChevronDown color='#787C84' strokeWidth='3px'/>} 
-        label='Project type' 
-        withAsterisk 
+        rightSection={<IconChevronDown color='#787C84' strokeWidth='3px' />}
+        label='Project type'
+        withAsterisk
         data={projectTypeSelectOptions}
-        placeholder='E.g. Company Research'/>
+        placeholder='E.g. Company Research' />
       {
-        isCompanySelected 
+        isCompanySelected
         && <TextInput
           {...form.getInputProps('companies')}
           label='Companies'
           withAsterisk
-          placeholder='E.g.Microsoft'/>
+          placeholder='E.g.Microsoft' />
       }
-      <TextInput 
+      <TextInput
         {...form.getInputProps('description')}
         label='Project Description'
-        placeholder='Please define the purpose for this project.'/>
+        placeholder='Please define the purpose for this project.' />
       <Textarea
         {...form.getInputProps('scope')}
         label='Project Scope'
-        placeholder={descriptionPlaceholder}/>
+        placeholder={descriptionPlaceholder} />
 
       <Checkbox.Group
         defaultValue={form.getInputProps('expert').value}
         label='Expert'
-        withAsterisk w='50%' 
+        withAsterisk w='50%'
         {...form.getInputProps('expert')}
         onChange={handleCheckboxChange}>
         <SimpleGrid cols={2} verticalSpacing='7px'>
           {
-          projectExpertCheckboxOptions.map(option => 
-            <Checkbox color='#AEADD5' value={option.value} label={option.label}/>
-          )
-         }
+            projectExpertCheckboxOptions.map(option =>
+              <Checkbox color='#AEADD5' value={option.value} label={option.label} />
+            )
+          }
         </SimpleGrid>
       </Checkbox.Group>
-    
+
     </Stack>
   );
 };

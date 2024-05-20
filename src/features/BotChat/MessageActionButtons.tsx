@@ -1,11 +1,11 @@
 import { ActionIcon } from '@mantine/core';
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 interface IMessageActionButtonProps extends PropsWithChildren {
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
-const MessageActionButton: FC<IMessageActionButtonProps> = ({ children, onClick }) =>
+const MessageActionButton = ({ children, onClick }: IMessageActionButtonProps) =>
   <ActionIcon variant='transparent' color='#787C84' onClick={onClick}>{children}</ActionIcon>;
 
 export default MessageActionButton;

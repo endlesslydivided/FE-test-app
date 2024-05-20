@@ -1,7 +1,7 @@
 import { Button, Group } from '@mantine/core';
 import { zodResolver } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { FC, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { ModalForm } from '../../widgets/form/ModalForm';
 import { useFormManager } from '../../widgets/form/useFormManager';
@@ -9,7 +9,7 @@ import { FormInputs } from './FormInputs';
 import { INewDataEntry, INewDataModalProps } from './model';
 import { newDataValidationSchema } from './validation';
 
-export const NewDataModal: FC<INewDataModalProps> = props => {
+export const NewDataModal= (props: INewDataModalProps) => {
 
   const { opened, close } = props;
 
