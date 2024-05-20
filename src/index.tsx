@@ -6,8 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import AppRouter from './app/Router';
-import { QueryContextProvider } from './common/context';
-import { UserProvider } from './common/context/UserContext/UserProvider';
+import { QueryContextProvider } from './app/context';
+import { UserProvider } from './app/context/UserContext';
+import './fonts.css';
 import './index.css';
 import checkboxClasses from './theme/checkboxTheme.module.css';
 import selectClasses from './theme/selectTheme.module.css';
@@ -48,6 +49,7 @@ const theme = createTheme({
         label: selectClasses.selectLabel,
         input: selectClasses.selectInput,
         error: selectClasses.selectError,
+        option: selectClasses.selectInput,
       },
     },
     Checkbox: {
@@ -62,7 +64,7 @@ const theme = createTheme({
       },
     },
     Text: {
-      styles: { 
+      styles: {
         root: {
           lineHeight: '100%',
         },
@@ -78,7 +80,7 @@ root.render(
         <ScrollArea h='100%'>
           <QueryContextProvider>
             <Notifications />
-            <AppRouter/>
+            <AppRouter />
           </QueryContextProvider>
         </ScrollArea>
       </MantineProvider>

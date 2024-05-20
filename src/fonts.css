@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Bold_Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Light.ttf") format("truetype");
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Light_Italic.ttf") format("truetype");
+    font-weight: light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/sansation/Sansation_Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./assets/fonts/robotoCondensed/RobotoCondensed-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./assets/fonts/robotoCondensed/RobotoCondensed-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/Inter-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/Inter-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

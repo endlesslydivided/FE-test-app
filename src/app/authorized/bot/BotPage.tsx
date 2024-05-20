@@ -1,7 +1,6 @@
-/* eslint-disable max-len */
 import type { FC } from 'react';
 
-import BotChat from '../../../widgets/BotChat/BotChat';
+import BotChat from '../../../features/BotChat/BotChat';
 
 export const BotPage: FC = () => {
   return (<BotChat />);

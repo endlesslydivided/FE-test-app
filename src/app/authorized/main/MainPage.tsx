@@ -4,13 +4,14 @@ import type { FC, PropsWithChildren } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import successGuy from '../../../assets/images/successGuy.svg';
-import { PageLayout } from '../../../common/components/PageLayout/PageLayout';
-import { useAuth } from '../../../common/context/UserContext/UserProvider';
-import { MAIN_PATH, SEARCH_PATH } from '../../Router';
+import { PageLayout } from '../../../widgets/PageLayout';
+import { useAuth } from '../../context';
+import { MAIN_PATH, SEARCH_PATH } from '../../../app/Router';
+
 const BoldListText: FC<PropsWithChildren> = ({ children: text }) => {
   return (
     <Group>
-      <IconCheck size='32px' color='#19AA90' strokeWidth='4px'/>
+      <IconCheck size='32px' color='#19AA90' strokeWidth='4px' />
       <Text fw='bold' fz='18px'>{text}</Text>
     </Group>
   );
@@ -24,7 +25,7 @@ export const MainPage: FC = () => {
 
   const leftSection = (
     <Stack gap='16px'>
-      <Text c='#6869AC' fw='bold' fz='h1'>Welcome{ auth.user?.name ? ' ' + auth.user?.name : '' }!</Text>
+      <Text c='#6869AC' fw='bold' fz='h1'>Welcome{auth.user?.name ? ' ' + auth.user?.name : ''}!</Text>
       <Text fw='bold' fz='h2'>We are so glad to have in Aura.</Text>
       <Text>We have 500+ companies with interviews and data for your investment analysis and research.</Text>
       <Text>You will be able to:</Text>
@@ -41,16 +42,24 @@ export const MainPage: FC = () => {
         px='32px'
         c='#3E4551'
         variant='default'
-        styles={{ root: { 
-      alignSelf: 'start', 
-      borderColor: '#787C84' }, 
-      label: { padding: '13px 0px' } }}>Let's begin!</Button>
+        styles={{
+          root: {
+            alignSelf: 'start',
+            borderColor: '#787C84'
+          },
+          label: {
+            padding: '13px 0px'
+          }
+        }}>
+        Let's begin!
+      </Button>
     </Stack>);
 
-  const rightSection = (<Image src={successGuy}/>);
+  const rightSection = (<Image src={successGuy} />);
+
   return (
-    <PageLayout 
+    <PageLayout
       leftSection={leftSection}
-      rightSection={rightSection}/>
+      rightSection={rightSection} />
   );
 };

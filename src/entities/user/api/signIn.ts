@@ -1,5 +1,5 @@
 import { usersJSON } from '../../../shared';
-import { ISignInData } from '../../../widgets/SignInForm/model';
+import { ISignInData } from '../../../features/SignInForm/model';
 import { IUser } from '../user.model';
 
 export const signIn = (values: ISignInData): IUser | null => {

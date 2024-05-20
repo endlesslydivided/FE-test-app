@@ -1,3 +1,3 @@
-export * from './search/SearchPage';
-export * from './bot/BotPage';
-export * from './main/MainPage';
+export * from './search';
+export * from './bot';
+export * from './main';

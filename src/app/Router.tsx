@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import Layout from '../common/components/layout/Layout';
-import { useAuth } from '../common/context/UserContext/UserProvider';
+import { useAuth } from './context';
 import { BotPage, MainPage, SearchPage } from './authorized';
 import { AuthorizationPage } from './unauthorized';
-import { BotLayout } from '../common/components/BotLayout/BotLayout';
+import { BotLayout } from '../widgets/BotLayout';
+import { Layout } from '../widgets/layout';
 
 export const MAIN_PATH = '/main';
 export const SEARCH_PATH = '/search';
@@ -16,7 +16,7 @@ const AppRouter: FC = () => {
 
   const { auth } = useAuth();
 
-  const mainRoute = !auth?.isSignedIn 
+  const mainRoute = auth?.isSignedIn
     ? (
       <Route>
         <Route path={MAIN_PATH}>
@@ -29,16 +29,16 @@ const AppRouter: FC = () => {
           <Route element={<BotLayout />}>
             <Route path={MAIN_PATH + BOT_PATH} element={<BotPage />} />
           </Route>
-         
-          <Route path='*' element={<Navigate to={MAIN_PATH}/>} />
+
+          <Route path='*' element={<Navigate to={MAIN_PATH} />} />
         </Route>
-        <Route path='*' element={<Navigate to={MAIN_PATH}/>} />
+        <Route path='*' element={<Navigate to={MAIN_PATH} />} />
       </Route>
     )
     : (
       <Route>
-        <Route path={SIGNIN_PATH} element={<AuthorizationPage />} index/>
-        <Route path='*' element={<Navigate to={SIGNIN_PATH}/>} />
+        <Route path={SIGNIN_PATH} element={<AuthorizationPage />} index />
+        <Route path='*' element={<Navigate to={SIGNIN_PATH} />} />
       </Route>
     );
 

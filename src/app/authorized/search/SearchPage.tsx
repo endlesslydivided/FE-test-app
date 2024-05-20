@@ -2,10 +2,10 @@ import { Image, Stack, Text } from '@mantine/core';
 import type { FC } from 'react';
 
 import statsGuy from '../../../assets/images/statsGuy.svg';
-import { PageLayout } from '../../../common/components/PageLayout/PageLayout';
-import { FinancialSearchInput } from '../../../widgets/FinancialSearch/FinancialSearchInput';
+import { PageLayout } from '../../../widgets/PageLayout';
+import { FinancialSearchInput } from '../../../features';
 
-interface ISearchPageProps {}
+interface ISearchPageProps { }
 
 export const SearchPage: FC<ISearchPageProps> = () => {
 
@@ -15,12 +15,12 @@ export const SearchPage: FC<ISearchPageProps> = () => {
       <Text>Find the company you are interested in.</Text>
       <Text>This will help us customize your experience.</Text>
     </Text>
-    <FinancialSearchInput/>
+    <FinancialSearchInput />
   </Stack>);
 
-  const rightSection = (<Image src={statsGuy}/>);
+  const rightSection = (<Image src={statsGuy} />);
 
   return (<PageLayout
     leftSection={leftSection}
-    rightSection={rightSection}/>);
+    rightSection={rightSection} />);
 };

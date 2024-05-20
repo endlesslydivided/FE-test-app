@@ -6,6 +6,7 @@
       "dom.iterable",
       "ES2022"
     ],
+    "useDefineForClassFields": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,12 +14,20 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "baseUrl": ".",
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    },
   },
   "include": [
     "src",
@@ -26,16 +35,5 @@
     "shared/consts",
     ".eslintrc.js",
   ],
-  "baseUrl": "./src",
-  "paths": {
-    "@/*": [
-      "./src/*"
-    ],
-    "@common/*": [
-      "./src/common/*"
-    ],
-    "@assets/*": [
-      "./src/assets/*"
-    ],
-  }
+  
 }
