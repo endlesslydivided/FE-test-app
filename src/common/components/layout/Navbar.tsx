@@ -17,8 +17,9 @@ const NavbarButton: FC<INavbarButtonProps> = ({ href, children }) => {
     to={href}
     fw='bold'
     flex='1'
+    radius='0'
     w='100%'
-    variant='transparent'
+    variant='subtle'
     c='white'>
     {children}
   </Button>);
@@ -32,21 +33,22 @@ const Navbar: FC = () => {
   return (
     <Flex direction='column' align='center' h='100%' w='100%'>
       <Image p='sm' src={logo} w='100px' />
-      <Flex direction='column' h='100%' justify='space-between' my='50px'>
-        <Stack flex='1' gap='32px'>
-          <NavbarButton href={MAIN_PATH + SEARCH_PATH}> <IconSearch/></NavbarButton>
-          <NavbarButton href={MAIN_PATH + BOT_PATH}><IconRobot/></NavbarButton>
+      <Flex direction='column' h='100%' justify='space-between' w='100%'>
+        <Stack flex='1' gap='16px'>
+          <NavbarButton href={MAIN_PATH + SEARCH_PATH}> <IconSearch /></NavbarButton>
+          <NavbarButton href={MAIN_PATH + BOT_PATH}><IconRobot /></NavbarButton>
         </Stack>
-        <Box flex='2'/>
-        <Stack flex='1' gap='32px'>
-          <Button 
-            onClick={() => {signOut(); navigate(SIGNIN_PATH)}}
+        <Box flex='4' />
+        <Stack flex='1' gap='16px'>
+          <Button
+            onClick={() => { signOut(); navigate(SIGNIN_PATH) }}
             fw='bold'
             flex='1'
+            radius='0'
             w='100%'
-            variant='transparent'
-            c='white'> 
-            <IconDoorExit/>
+            variant='subtle'
+            c='white'>
+            <IconDoorExit />
           </Button>
         </Stack>
       </Flex>

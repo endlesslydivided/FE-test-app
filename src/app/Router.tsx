@@ -16,7 +16,7 @@ const AppRouter: FC = () => {
 
   const { auth } = useAuth();
 
-  const mainRoute = auth?.isSignedIn 
+  const mainRoute = !auth?.isSignedIn 
     ? (
       <Route>
         <Route path={MAIN_PATH}>
