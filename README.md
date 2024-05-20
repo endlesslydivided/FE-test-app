@@ -1,11 +1,11 @@
 # React, TS, React Query, Feature Sliced Design, Zod - Aura
 What functionality is available:
 
-- Authentication
-- Main page with 3 buttons
-- Search financial data, selecting items
-- AI Chatbot
-- Form with validation
+- Authentication;
+- Main page with 3 buttons;
+- Search financial data, selecting items;
+- AI Chatbot;
+- Form with validation.
 
 # About App 
 **React Query** + **Axios** was used to fetch data.
@@ -23,13 +23,13 @@ REACT_APP_AI_ANTHROPIC_API_KEY=
 > [!IMPORTANT]
 > Note: The AI service has limits that can be exceeded.
 
-# To start the application locally, run:
+ To start the application locally, run:
 
 ```bash
 npm run dev
 ```
 
-Credits for sign in:
+Credits to sign in:
 
 username =
 ```
