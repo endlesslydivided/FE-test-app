@@ -30,7 +30,11 @@ npm run dev
 
 Credits for sign in:
 
+username =
 ```
-username = johnuser@mail.com
-password = JohnPassword123
+johnuser@mail.com
+```
+password = 
+```
+JohnPassword123
 ```
