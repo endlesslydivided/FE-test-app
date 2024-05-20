@@ -20,7 +20,7 @@ const BotChat = () => {
   const [userMessage, setUserMessage] = useState('');
   const [messages, setMessages] = useState<IChatMessage[]>([]);
 
-  const { data: result, isFetching, refetch: send } = useSendMessage({
+  const { data: result, isFetching, refetch: send, error } = useSendMessage({
     temperature: BOT_TEMPERATURE,
     messages: [
       { role: 'user', content: userMessage },
@@ -39,8 +39,8 @@ const BotChat = () => {
           prev[prev.length - 1] = lastMessage;
           return [...prev];
         });
-      } else if (result && result?.status !== 200) {
-        notifications.show({ color: 'red', message: 'Some error occured', title: 'Error' });
+      } else if (error && result?.status !== 200) {
+        notifications.show({ color: 'red', message: error?.message || 'Some error occured', title: 'Error' });
       }
     }
   }, [isFetching]);

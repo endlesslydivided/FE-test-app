@@ -7,6 +7,7 @@ import { useGetGeneralData, usePrefetchGeneralData } from '../../entities/financ
 import { IFinancialSearchData } from '../../entities/financial/financialData.model';
 import { MultiSelectInput } from '../../widgets/inputs/MultiSelect/MultiSelectInput';
 import { MultiSelectPillsInput } from '../../widgets/inputs/MultiSelect/PillsInput';
+import { notifications } from '@mantine/notifications';
 
 const renderMultiSelectOption: MultiSelectProps['renderOption'] = ({ option }: { option: any }) => (
   <Group gap='8px' wrap='nowrap'>
@@ -26,7 +27,7 @@ export const FinancialSearchInput = () => {
 
   const [prefetchedData, setPrefetchedData] = useState<ComboboxItem[]>([]);
 
-  const { isFetching, data: result, refetch } = useGetGeneralData({ query: searchText });
+  const { isFetching, data: result, refetch, error } = useGetGeneralData({ query: searchText });
   const { isFetching: isFetchingPrefetch, data: prefetchResult } = usePrefetchGeneralData({ query: searchText });
 
   const selectMapCallback = (item: IFinancialSearchData) =>
@@ -43,6 +44,9 @@ export const FinancialSearchInput = () => {
   const previousValues = usePrevious({ searchText });
 
   useEffect(() => {
+    if(error) {
+      notifications.show({color:'red',message: error?.message || 'Some error occured', title: 'Error'})
+    }
     if (result !== undefined) {
       const mappedResult = result.data?.map(selectMapCallback);
       setAllFoundData(prev => uniqBy(prev ? [...prev, ...mappedResult] : mappedResult, 'value'));

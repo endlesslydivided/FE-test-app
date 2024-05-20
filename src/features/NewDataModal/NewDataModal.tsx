@@ -17,7 +17,7 @@ export const NewDataModal= (props: INewDataModalProps) => {
 
   const onSubmit = (values: INewDataEntry) => {
     notifications.show({ color: 'green', message: 'Entry created successfully', title: 'Success' });
-    console.log(values);
+    console.log('Result', values);
     close();
   };
 
