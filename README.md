@@ -7,7 +7,7 @@ What functionality is available:
 - AI Chatbot
 - Form with validation
 
-# About App
+# About App (Node.js version: v20.10.0)
 **React Query** + **Axios** was used to fetch data.
 **Mantine component library** is used to style application. Some components styling is predefined with theme.
 **Zod** is used for validation.
