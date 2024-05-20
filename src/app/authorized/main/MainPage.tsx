@@ -26,8 +26,8 @@ export const MainPage = () => {
   const leftSection = (
     <Stack gap='16px'>
       <Text c='#6869AC' fw='bold' fz='h1'>Welcome{auth.user?.name ? ' ' + auth.user?.name : ''}!</Text>
-      <Text fw='bold' fz='h2'>We are so glad to have in Aura.</Text>
-      <Text>We have 500+ companies with interviews and data for your investment analysis and research.</Text>
+      <Text fw='bold' fz='h2'>We are so glad to have You in Aura.</Text>
+      <Text>We have 5,000+ companies with interviews and data for your investment analysis and research.</Text>
       <Text>You will be able to:</Text>
 
       <BoldListText>Save companies of your interest and see new entries</BoldListText>
