@@ -25,7 +25,7 @@ export const TopSection = () => {
     <>
       <NewDataModal opened={opened} close={close} />
       <Flex p='lg' gap='35px' direction='column' align='center' className={classes.rootTopSectionBox}>
-        <Stack gap='31px' align='center'>
+        <Stack align='center'>
           <Text c='white' fw='bold' fz='32px'>AURA</Text>
           <Stack gap='8px'>
             <Text c='white' fw='bold' fz='24px'>Augmented Universal Research Assistant</Text>
