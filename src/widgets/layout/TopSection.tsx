@@ -13,11 +13,9 @@ import documentsImage from '../../assets/images/documents.svg';
 import documentHumanImage from '../../assets/images/filesBundle.svg';
 import robotImage from '../../assets/images/robot.svg';
 import { NewDataModal } from '../../features/NewDataModal';
-import classes from './Layout.module.css';
 import { HeaderButton } from './HeaderButton';
-import { useFormManager } from '../../widgets/form/useFormManager';
+import classes from './Layout.module.css';
 
-console.log(useFormManager)
 export const TopSection: FC = () => {
 
   const [opened, { open, close }] = useDisclosure(false);
