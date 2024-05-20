@@ -35,7 +35,7 @@ const BotChat: FC = () => {
         setMessages(prev => {
           const lastMessage = prev[prev.length - 1];
           console.log(prev);
-          lastMessage.answer = botAnswer.content[0].text;
+          lastMessage.answer = botAnswer.content[0]?.text;
           prev[prev.length - 1] = lastMessage;
           return [...prev];
         });
